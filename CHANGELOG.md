@@ -4,6 +4,30 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [1.1.0] - 2026-04-09
+
+### Changed
+
+- Migrated to agentskills.io standard (folder-based `skills/sc-xxx/SKILL.md` format)
+- Primary install method is now `npx skills add ersinkoc/security-check`
+- Skills are maintained in a single canonical `skills/` directory (was triplicated)
+- Checklists bundled inside language skill `references/` subdirectories
+- Comprehensive installer scripts: `skills.sh` (macOS/Linux) and `skills.ps1` (Windows)
+- Added Roo Code and Amp to supported platforms
+
+### Fixed
+
+- Critical: CLAUDE.md now references all 48 skills correctly (was missing 33 skills)
+- Fixed `detect_platform()` stdout contamination in skills.sh
+- Fixed `$Args` parameter shadowing in skills.ps1
+- All documentation updated to reflect new file structure
+
+### Removed
+
+- Redundant `scan-target/.claude/skills/` and `scan-target/.agents/skills/` copies
+- Standalone `checklists/` directory (now in skill `references/`)
+- `install.sh` and `install.ps1` wrapper scripts
+
 ## [1.0.0] - 2026-04-08
 
 ### Added

@@ -24,7 +24,7 @@ $ErrorActionPreference = 'Stop'
 
 $RepoUrl = 'https://github.com/ersinkoc/security-check'
 $Branch = 'main'
-$Version = '1.0.0'
+$Version = '1.1.0'
 $TempDir = Join-Path ([System.IO.Path]::GetTempPath()) "security-check-$(Get-Random)"
 
 # Skill categories

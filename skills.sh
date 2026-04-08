@@ -14,7 +14,7 @@ set -euo pipefail
 REPO_URL="https://github.com/ersinkoc/security-check"
 BRANCH="main"
 TEMP_DIR=$(mktemp -d)
-VERSION="1.0.0"
+VERSION="1.1.0"
 
 # Colors
 RED='\033[0;31m'
