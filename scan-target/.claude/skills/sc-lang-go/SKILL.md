@@ -17,7 +17,7 @@ Detects Go-specific security anti-patterns, common mistakes, and language-idioma
 Activates when Go is detected in architecture.md.
 
 ## Checklist Reference
-References `checklists/go-security-checklist.md`.
+References `references/go-security-checklist.md`.
 
 ## Go-Specific Vulnerability Patterns
 

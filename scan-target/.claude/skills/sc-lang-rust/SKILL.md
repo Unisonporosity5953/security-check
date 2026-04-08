@@ -20,7 +20,7 @@ Activates when Rust is detected in `security-report/architecture.md`.
 
 ## Checklist Reference
 
-References `checklists/rust-security-checklist.md`.
+References `references/rust-security-checklist.md`.
 
 ## Rust-Specific Vulnerability Patterns
 

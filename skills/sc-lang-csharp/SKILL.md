@@ -20,7 +20,7 @@ Activates when C# or .NET is detected in `security-report/architecture.md`.
 
 ## Checklist Reference
 
-References `checklists/csharp-security-checklist.md`.
+References `references/csharp-security-checklist.md`.
 
 ## C#/.NET-Specific Vulnerability Patterns
 

@@ -20,7 +20,7 @@ Activates when Python source files (`.py`, `.pyw`, `.pyi`) are detected in the s
 
 ## Checklist Reference
 
-References `checklists/python-security-checklist.md` for the full enumeration of checks. Each category below maps to one or more checklist items.
+References `references/python-security-checklist.md` for the full enumeration of checks. Each category below maps to one or more checklist items.
 
 ## Severity Levels
 

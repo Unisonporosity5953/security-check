@@ -23,7 +23,7 @@ Activates when TypeScript or JavaScript is detected in the project. Detection si
 
 ## Checklist Reference
 
-References `checklists/typescript-security-checklist.md`.
+References `references/typescript-security-checklist.md`.
 
 ## TypeScript/JavaScript-Specific Vulnerability Patterns
 

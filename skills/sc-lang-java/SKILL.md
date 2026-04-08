@@ -20,7 +20,7 @@ Activates when Java or Kotlin is detected in `security-report/architecture.md`.
 
 ## Checklist Reference
 
-References `checklists/java-security-checklist.md`.
+References `references/java-security-checklist.md`.
 
 ## Java/Kotlin-Specific Vulnerability Patterns
 

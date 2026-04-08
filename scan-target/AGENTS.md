@@ -1,7 +1,7 @@
 # Security Check - Agent Orchestration (Multi-Editor Compatible)
 
-# Compatible with: Opencode, Cursor, Codex, and other AI coding assistants
-# Skills are located in: .agents/skills/ (symlinked or copied from .claude/skills/)
+# Compatible with: Opencode, Cursor, Codex, Gemini CLI, and other AI coding assistants
+# Skills are located in: .agents/skills/
 
 ## Scan Triggers
 
@@ -75,31 +75,88 @@ Run vulnerability scanning skills **in parallel** based on detected languages an
 
 | Language | Skill | File |
 |----------|-------|------|
-| JavaScript/TypeScript | sc-lang-js | `.agents/skills/sc-lang-js/SKILL.md` |
+| JavaScript/TypeScript | sc-lang-typescript | `.agents/skills/sc-lang-typescript/SKILL.md` |
 | Python | sc-lang-python | `.agents/skills/sc-lang-python/SKILL.md` |
 | Go | sc-lang-go | `.agents/skills/sc-lang-go/SKILL.md` |
 | Rust | sc-lang-rust | `.agents/skills/sc-lang-rust/SKILL.md` |
 | Java/Kotlin | sc-lang-java | `.agents/skills/sc-lang-java/SKILL.md` |
-| C/C++ | sc-lang-c | `.agents/skills/sc-lang-c/SKILL.md` |
 | PHP | sc-lang-php | `.agents/skills/sc-lang-php/SKILL.md` |
-| Ruby | sc-lang-ruby | `.agents/skills/sc-lang-ruby/SKILL.md` |
 | C#/.NET | sc-lang-csharp | `.agents/skills/sc-lang-csharp/SKILL.md` |
-| Swift | sc-lang-swift | `.agents/skills/sc-lang-swift/SKILL.md` |
 
-#### Category Skills (always run relevant ones):
+#### Category Skills — Injection (always run):
 
 | Category | Skill | File |
 |----------|-------|------|
-| Web Security | sc-web | `.agents/skills/sc-web/SKILL.md` |
-| API Security | sc-api | `.agents/skills/sc-api/SKILL.md` |
+| SQL Injection | sc-sqli | `.agents/skills/sc-sqli/SKILL.md` |
+| NoSQL Injection | sc-nosqli | `.agents/skills/sc-nosqli/SKILL.md` |
+| GraphQL Injection | sc-graphql | `.agents/skills/sc-graphql/SKILL.md` |
+| XSS | sc-xss | `.agents/skills/sc-xss/SKILL.md` |
+| SSTI | sc-ssti | `.agents/skills/sc-ssti/SKILL.md` |
+| XXE | sc-xxe | `.agents/skills/sc-xxe/SKILL.md` |
+| LDAP Injection | sc-ldap | `.agents/skills/sc-ldap/SKILL.md` |
+| Command Injection | sc-cmdi | `.agents/skills/sc-cmdi/SKILL.md` |
+| Header Injection | sc-header-injection | `.agents/skills/sc-header-injection/SKILL.md` |
+
+#### Category Skills — Code Execution:
+
+| Category | Skill | File |
+|----------|-------|------|
+| Remote Code Execution | sc-rce | `.agents/skills/sc-rce/SKILL.md` |
+| Deserialization | sc-deserialization | `.agents/skills/sc-deserialization/SKILL.md` |
+
+#### Category Skills — Access Control:
+
+| Category | Skill | File |
+|----------|-------|------|
 | Authentication | sc-auth | `.agents/skills/sc-auth/SKILL.md` |
-| Cryptography | sc-crypto | `.agents/skills/sc-crypto/SKILL.md` |
-| Infrastructure | sc-infra | `.agents/skills/sc-infra/SKILL.md` |
-| Secrets Detection | sc-secrets | `.agents/skills/sc-secrets/SKILL.md` |
-| Configuration | sc-config | `.agents/skills/sc-config/SKILL.md` |
-| Input Validation | sc-input-validation | `.agents/skills/sc-input-validation/SKILL.md` |
-| Access Control | sc-access-control | `.agents/skills/sc-access-control/SKILL.md` |
-| Data Protection | sc-data-protection | `.agents/skills/sc-data-protection/SKILL.md` |
+| Authorization / IDOR | sc-authz | `.agents/skills/sc-authz/SKILL.md` |
+| Privilege Escalation | sc-privilege-escalation | `.agents/skills/sc-privilege-escalation/SKILL.md` |
+| Session Security | sc-session | `.agents/skills/sc-session/SKILL.md` |
+
+#### Category Skills — Data Exposure:
+
+| Category | Skill | File |
+|----------|-------|------|
+| Hardcoded Secrets | sc-secrets | `.agents/skills/sc-secrets/SKILL.md` |
+| Data Exposure | sc-data-exposure | `.agents/skills/sc-data-exposure/SKILL.md` |
+| Weak Cryptography | sc-crypto | `.agents/skills/sc-crypto/SKILL.md` |
+
+#### Category Skills — Server-Side:
+
+| Category | Skill | File |
+|----------|-------|------|
+| SSRF | sc-ssrf | `.agents/skills/sc-ssrf/SKILL.md` |
+| Path Traversal | sc-path-traversal | `.agents/skills/sc-path-traversal/SKILL.md` |
+| File Upload | sc-file-upload | `.agents/skills/sc-file-upload/SKILL.md` |
+| Open Redirect | sc-open-redirect | `.agents/skills/sc-open-redirect/SKILL.md` |
+
+#### Category Skills — Client-Side:
+
+| Category | Skill | File |
+|----------|-------|------|
+| CSRF | sc-csrf | `.agents/skills/sc-csrf/SKILL.md` |
+| CORS Misconfiguration | sc-cors | `.agents/skills/sc-cors/SKILL.md` |
+| Clickjacking | sc-clickjacking | `.agents/skills/sc-clickjacking/SKILL.md` |
+| WebSocket Security | sc-websocket | `.agents/skills/sc-websocket/SKILL.md` |
+
+#### Category Skills — Logic & Design:
+
+| Category | Skill | File |
+|----------|-------|------|
+| Business Logic | sc-business-logic | `.agents/skills/sc-business-logic/SKILL.md` |
+| Race Conditions | sc-race-condition | `.agents/skills/sc-race-condition/SKILL.md` |
+| Mass Assignment | sc-mass-assignment | `.agents/skills/sc-mass-assignment/SKILL.md` |
+
+#### Category Skills — API & Infrastructure:
+
+| Category | Skill | File |
+|----------|-------|------|
+| API Security | sc-api-security | `.agents/skills/sc-api-security/SKILL.md` |
+| Rate Limiting | sc-rate-limiting | `.agents/skills/sc-rate-limiting/SKILL.md` |
+| JWT Security | sc-jwt | `.agents/skills/sc-jwt/SKILL.md` |
+| Infrastructure as Code | sc-iac | `.agents/skills/sc-iac/SKILL.md` |
+| Docker Security | sc-docker | `.agents/skills/sc-docker/SKILL.md` |
+| CI/CD Security | sc-ci-cd | `.agents/skills/sc-ci-cd/SKILL.md` |
 
 Each skill produces a findings file: `security-report/findings/<skill-name>.json`
 
@@ -165,39 +222,75 @@ For diff/PR scans, use a streamlined pipeline:
 
 ---
 
-## Available Skills - Complete Catalog
+## Available Skills - Complete Catalog (48 skills)
 
-### Core Pipeline Skills
-- `sc-orchestrator` - Master coordination and state management (`.agents/skills/sc-orchestrator/SKILL.md`)
-- `sc-recon` - Codebase reconnaissance and architecture mapping (`.agents/skills/sc-recon/SKILL.md`)
-- `sc-dependency-audit` - Supply chain and dependency analysis (`.agents/skills/sc-dependency-audit/SKILL.md`)
-- `sc-verifier` - False positive elimination and confidence scoring (`.agents/skills/sc-verifier/SKILL.md`)
-- `sc-report` - Final comprehensive report generation (`.agents/skills/sc-report/SKILL.md`)
-- `sc-diff-report` - Incremental/PR diff security report (`.agents/skills/sc-diff-report/SKILL.md`)
+### Core Pipeline Skills (6)
+- `sc-orchestrator` - Master coordination and state management
+- `sc-recon` - Codebase reconnaissance and architecture mapping
+- `sc-dependency-audit` - Supply chain and dependency analysis
+- `sc-verifier` - False positive elimination and confidence scoring
+- `sc-report` - Final comprehensive report generation
+- `sc-diff-report` - Incremental/PR diff security report
 
-### Language-Specific Vulnerability Skills
-- `sc-lang-js` - JavaScript/TypeScript (`.agents/skills/sc-lang-js/SKILL.md`)
-- `sc-lang-python` - Python (`.agents/skills/sc-lang-python/SKILL.md`)
-- `sc-lang-go` - Go (`.agents/skills/sc-lang-go/SKILL.md`)
-- `sc-lang-rust` - Rust (`.agents/skills/sc-lang-rust/SKILL.md`)
-- `sc-lang-java` - Java/Kotlin (`.agents/skills/sc-lang-java/SKILL.md`)
-- `sc-lang-c` - C/C++ (`.agents/skills/sc-lang-c/SKILL.md`)
-- `sc-lang-php` - PHP (`.agents/skills/sc-lang-php/SKILL.md`)
-- `sc-lang-ruby` - Ruby (`.agents/skills/sc-lang-ruby/SKILL.md`)
-- `sc-lang-csharp` - C#/.NET (`.agents/skills/sc-lang-csharp/SKILL.md`)
-- `sc-lang-swift` - Swift (`.agents/skills/sc-lang-swift/SKILL.md`)
+### Language-Specific Vulnerability Skills (7)
+- `sc-lang-typescript` - TypeScript/JavaScript (XSS, prototype pollution, ReDoS, eval injection, npm supply chain)
+- `sc-lang-python` - Python (pickle RCE, SSTI, subprocess injection, Django/Flask/FastAPI)
+- `sc-lang-go` - Go (goroutine leaks, unsafe pointer, race conditions, crypto/rand)
+- `sc-lang-rust` - Rust (unsafe blocks, FFI boundaries, Send/Sync, serde bombs)
+- `sc-lang-java` - Java/Kotlin (deserialization, JNDI, Spring SpEL, HQL injection, XXE)
+- `sc-lang-php` - PHP (type juggling, unserialize gadgets, phar, Laravel/WordPress)
+- `sc-lang-csharp` - C#/.NET (BinaryFormatter RCE, EF raw SQL, Blazor JS interop, SignalR)
 
-### Category Vulnerability Skills
-- `sc-web` - Web application security (`.agents/skills/sc-web/SKILL.md`)
-- `sc-api` - API security (`.agents/skills/sc-api/SKILL.md`)
-- `sc-auth` - Authentication and session management (`.agents/skills/sc-auth/SKILL.md`)
-- `sc-crypto` - Cryptographic implementation review (`.agents/skills/sc-crypto/SKILL.md`)
-- `sc-infra` - Infrastructure and deployment security (`.agents/skills/sc-infra/SKILL.md`)
-- `sc-secrets` - Hardcoded secrets, API keys, credentials (`.agents/skills/sc-secrets/SKILL.md`)
-- `sc-config` - Security configuration review (`.agents/skills/sc-config/SKILL.md`)
-- `sc-input-validation` - Input validation and injection (`.agents/skills/sc-input-validation/SKILL.md`)
-- `sc-access-control` - Authorization and privilege escalation (`.agents/skills/sc-access-control/SKILL.md`)
-- `sc-data-protection` - PII handling and data leakage (`.agents/skills/sc-data-protection/SKILL.md`)
+### Injection Skills (9)
+- `sc-sqli` - SQL injection (classic, blind, time-based, second-order, UNION)
+- `sc-nosqli` - NoSQL injection (MongoDB, Redis, Elasticsearch)
+- `sc-graphql` - GraphQL injection (introspection, depth attacks, field-level auth)
+- `sc-xss` - Cross-site scripting (reflected, stored, DOM)
+- `sc-ssti` - Server-side template injection (Jinja2, Twig, Freemarker, etc.)
+- `sc-xxe` - XML external entity injection
+- `sc-ldap` - LDAP injection (search filter, DN injection)
+- `sc-cmdi` - OS command injection (shell metacharacters, argument injection)
+- `sc-header-injection` - HTTP header injection (CRLF, Host header)
+
+### Code Execution Skills (2)
+- `sc-rce` - Remote code execution (eval/exec/Function across all languages)
+- `sc-deserialization` - Insecure deserialization (pickle, ObjectInputStream, unserialize, BinaryFormatter)
+
+### Access Control Skills (4)
+- `sc-auth` - Authentication flaws (weak passwords, brute force, timing attacks)
+- `sc-authz` - Authorization / IDOR (broken access control, object reference)
+- `sc-privilege-escalation` - Privilege escalation (role manipulation, JWT claim tampering)
+- `sc-session` - Session security (fixation, cookie attributes, regeneration)
+
+### Data Exposure Skills (3)
+- `sc-secrets` - Hardcoded secrets, API keys, credentials detection
+- `sc-data-exposure` - PII in logs, stack traces, debug mode, source maps
+- `sc-crypto` - Weak cryptography (ECB, static IVs, weak PRNG, disabled cert validation)
+
+### Server-Side Skills (4)
+- `sc-ssrf` - Server-side request forgery (URL fetching, cloud metadata)
+- `sc-path-traversal` - Directory traversal (../, zip slip, symlink attacks)
+- `sc-file-upload` - Unrestricted file upload (type validation, webroot upload)
+- `sc-open-redirect` - Open redirects (URL parameter manipulation)
+
+### Client-Side Skills (4)
+- `sc-csrf` - Cross-site request forgery (missing tokens, SameSite)
+- `sc-cors` - CORS misconfiguration (reflected origin, null origin)
+- `sc-clickjacking` - Clickjacking (X-Frame-Options, CSP frame-ancestors)
+- `sc-websocket` - WebSocket security (origin validation, auth on upgrade)
+
+### Logic & Design Skills (3)
+- `sc-business-logic` - Business logic flaws (price manipulation, workflow bypass)
+- `sc-race-condition` - Race conditions (TOCTOU, double-spend, read-modify-write)
+- `sc-mass-assignment` - Mass assignment (Express, Django, Laravel, Spring, ASP.NET)
+
+### API & Infrastructure Skills (6)
+- `sc-api-security` - API security (OWASP API Top 10, REST/GraphQL/gRPC)
+- `sc-rate-limiting` - Missing rate limiting (ReDoS, pagination abuse)
+- `sc-jwt` - JWT flaws (alg:none, weak secrets, missing validation, kid injection)
+- `sc-iac` - Infrastructure as Code (Dockerfile, K8s, Terraform, GitHub Actions)
+- `sc-docker` - Docker security (image hardening, secrets in layers)
+- `sc-ci-cd` - CI/CD security (expression injection, pull_request_target, unpinned actions)
 
 ---
 
@@ -213,30 +306,11 @@ security-report/
   verified-findings.md      # From sc-verifier
   SECURITY-REPORT.md        # Final report from sc-report
   findings/                 # Raw findings from each skill
-    sc-lang-js.json
-    sc-web.json
+    sc-sqli.json
+    sc-xss.json
     sc-secrets.json
     ...
 ```
-
----
-
-## Editor-Specific Notes
-
-### Opencode
-- Skills are read from `.agents/skills/` directory
-- Use `@sc-recon` syntax to invoke individual skills
-- The orchestrator skill manages the full pipeline
-
-### Cursor
-- Skills are loaded as context from `.agents/skills/`
-- Use the orchestrator skill for full pipeline execution
-- Individual skills can be referenced in chat
-
-### Codex
-- Skills are read from `.agents/skills/` directory
-- The AGENTS.md file serves as the primary instruction set
-- Skills are invoked by the orchestrator based on pipeline phase
 
 ---
 

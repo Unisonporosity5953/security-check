@@ -20,7 +20,7 @@ Activates when PHP is detected in `security-report/architecture.md`.
 
 ## Checklist Reference
 
-References `checklists/php-security-checklist.md`.
+References `references/php-security-checklist.md`.
 
 ## PHP-Specific Vulnerability Patterns
 
